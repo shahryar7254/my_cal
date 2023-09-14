@@ -1,3 +1,4 @@
+import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -131,14 +132,16 @@ class main_screen extends StatelessWidget{
                   //           : LightColors.leftOperatorColor,
                   //       text: buttons[index]);
                   case 19:
-                    return IconButton(
+                    ElevatedButton(
                       onPressed: () {
-                        // Add your screen rotation logic here.
+                        Navigator.push(
+                          context as BuildContext,
+                          MaterialPageRoute(
+                            builder: (context) => ScientificCal(context: context),
+                          ),
+                        );
                       },
-                      color: themeController.isDark
-                          ? DarkColors.btnBgColor
-                          : LightColors.btnBgColor,
-                      icon: const Icon(Icons.rotate_left), // You can use any circular icon you prefer.
+                      child: Text("Navigate to ScientificCal"),
                     );
 
                   default:
