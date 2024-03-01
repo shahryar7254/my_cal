@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ScientificCal extends StatelessWidget {
-  final BuildContext context;
-
-  const ScientificCal({required this.context});
-
   @override
-  Widget build(BuildContext buildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Scientific Calculator'),
